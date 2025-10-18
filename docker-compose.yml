@@ -4,7 +4,7 @@ services:
     container_name: mysql-practical
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: cleaner
+      MYSQL_DATABASE: productdb
     ports:
       - "3307:3306"
     volumes:
@@ -14,7 +14,7 @@ services:
 
   backend:
     image: somesh150805/2300031960-exam-backend:latest
-    container_name: springboot-prac
+    container_name: springboot-practical
     ports:
       - "2025:4000"
     depends_on:
@@ -25,7 +25,7 @@ services:
 
   frontend:
     image: somesh150805/2300031960-exam-frontend:latest
-    container_name: react-prac
+    container_name: react-practical
     ports:
       - "2001:80"
     depends_on:
